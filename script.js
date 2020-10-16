@@ -7,10 +7,10 @@ var generateBtn = document.querySelector("#generate");
 
 // Possible password values
 
-var charUpper = ["A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"];
-var charLower = ["a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"];
-var Numbers = "0123456789";
-var specialchar = "!@#$%^&*()~"
+var charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split ("");
+var charLower = "abcdefghijklmnopqrstuvwxyz" .split ("");
+var specialchar = "!@#$%^&*()_+=~`{}[]:;<>?/" .split ("");
+var Numbers = "0123456789" .split ("");
 
 
 
@@ -28,7 +28,7 @@ function writePassword() {
 function generatePassword() {
 
 
-  // Option variables
+  // Options within the criteria
   var passwordLength = "";
   var Upper;
   var Lower;
@@ -70,47 +70,43 @@ function generatePassword() {
 
 }
 
+ var passwordCharacters = []
+      
+if (Upper) {
+  passwordCharacters = passwordCharacters.concat(charUpper)
+}
 
+if (Lower) {
+  passwordCharacters = passwordCharacters.concat(charLower)
+}
+  
+if (Special) {
+  passwordCharacters = passwordCharacters.concat(specialchar)
+}
 
+if (Num) {
+  passwordCharacters = passwordCharacters.concat(Numbers)
+}
 
+  console.log(passwordCharacters)
+    
+  var randomPassword = ""
+      
+  for (var i = 0; i < passwordLength; i++) {
+    randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+    console.log(randomPassword)
+  }
+  return randomPassword;
+
+    
+
+    
 }
 
 
+
   
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

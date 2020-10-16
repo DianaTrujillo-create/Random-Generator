@@ -24,7 +24,7 @@ function writePassword() {
 
 
 
-//generate random password 
+
 function generatePassword() {
 
 
@@ -41,7 +41,7 @@ function generatePassword() {
 
   var passwordLength = prompt("How many characters would you like your password to contain? Choose between 8 and 128");
 
- // loop if user inputs outside of the criteria
+  // loop if user inputs outside of the criteria
 
   if (passwordLength < 8) {
     alert("The password must be at least 8 characters, try again!");
@@ -58,7 +58,7 @@ function generatePassword() {
   var Num = confirm("Click OK to confirm if you would like to include any numbers");
 
 
-  // Loop if user inputs outside of the criteria 
+// Loop if user inputs outside of the criteria 
 
 
   if (Upper === false && Lower === false && Special === false && Num === false) {
@@ -69,6 +69,8 @@ function generatePassword() {
     var Num = confirm("Click OK to confirm if you would like to include any numbers");
 
 }
+
+ //generating random password
 
  var passwordCharacters = []
       

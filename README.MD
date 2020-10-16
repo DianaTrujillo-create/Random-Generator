@@ -12,4 +12,4 @@ References:
 - Youtube videos 
 - Class activities 
 
-Screenshot: 
+Screenshot: screencapture-dianatrujillo-create-github-io-Random-Generator-2020-10-15-22_21_01.png
